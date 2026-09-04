@@ -21,4 +21,3 @@ jobs:
           base: header, activity, community, repositories
           plugin_languages: yes
           plugin_languages_analysis_timezone: Asia/Kolkata
-          plugin_habits: yes

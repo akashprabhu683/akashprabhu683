@@ -99,11 +99,6 @@ A modern developer portfolio showcasing my projects, technical skills, achieveme
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=akashprabhu683&show_icons=true&hide_border=true&theme=github_dark&count_private=true&show_rank=true" alt="Akash's GitHub Stats" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=akashprabhu683&layout=compact&hide_border=true&theme=github_dark&langs_count=6" alt="Most Used Languages" width="48%" />
-
-<br />
-
 <img src="https://streak-stats.demolab.com/?user=akashprabhu683&theme=github-dark-blue&hide_border=true" alt="Akash's GitHub Streak" />
 
 </div>

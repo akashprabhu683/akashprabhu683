@@ -108,6 +108,72 @@ A modern developer portfolio showcasing my projects, technical skills, achieveme
 
 ---
 
+## 📊 GitHub Analytics
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/akashprabhu683/akashprabhu683/main/github-metrics.svg" alt="GitHub Metrics" />
+</div>
+
+> This is a self-hosted, statically generated SVG — rebuilt every 6 hours by a GitHub Action and committed straight to this repo, so it renders with zero live third-party dependency (no external API calls, no broken-image risk from a service being down).
+
+<details>
+<summary><strong>⚙️ How this is set up (click to expand)</strong></summary>
+
+<br/>
+
+This section is powered by [`lowlighter/metrics`](https://github.com/lowlighter/metrics), run on a schedule via GitHub Actions, which renders the SVG server-side and commits it directly to this repo.
+
+**1. Workflow file** — `.github/workflows/github-metrics.yml`:
+
+```yaml
+name: GitHub Analytics
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # refresh every 6 hours
+  workflow_dispatch:         # allows manual "Run workflow" trigger
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  build-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: github-metrics.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: header, activity, community, repositories
+          plugin_languages: yes
+          plugin_languages_analysis_timezone: Asia/Kolkata
+          plugin_habits: yes
+```
+
+**2. Add the required secret**
+- Go to **Settings → Secrets and variables → Actions** in this repo (`akashprabhu683/akashprabhu683`).
+- Add a secret named `METRICS_TOKEN` — a personal access token (classic, scopes: `repo`, `read:user`) works best, since it unlocks the language and activity plugins that the default `GITHUB_TOKEN` can't reach.
+
+**3. Run it once manually**
+- Go to the **Actions** tab → select **GitHub Analytics** → **Run workflow**.
+- This generates `github-metrics.svg` in the repo root for the first time. After that, it refreshes automatically every 6 hours and on every push to `main`.
+
+**4. Embed it**
+- The image tag above already points at:
+  `https://raw.githubusercontent.com/akashprabhu683/akashprabhu683/main/github-metrics.svg`
+- Because it's a `raw.githubusercontent.com` link to a file in this repo (not an external generator), it can't 404 or time out the way live badge-generator URLs sometimes do.
+
+**Notes**
+- `plugin_languages_analysis_timezone: Asia/Kolkata` sets the timezone used for activity stats — swap it if needed.
+- `base:` controls which sections render — add/remove `repositories`, `community`, `activity`, `header`.
+- `plugin_habits` gives contribution-habit stats. There's no official static-Action version of the classic streak counter — if that's wanted, the safest route is self-hosting the `github-readme-streak-stats` API on your own free deploy rather than relying on the shared public instance.
+
+</details>
+
+---
+
 ## 🏆 Achievements
 
 - 🥇 **DEFY'26** — 1st Place Winner

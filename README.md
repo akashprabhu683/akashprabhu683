@@ -65,9 +65,9 @@ A modern developer portfolio showcasing my projects, technical skills, achieveme
 
 ## 📫 Connect With Me
 
-- Portfolio: YOUR_PORTFOLIO_LINK
-- LinkedIn: YOUR_LINKEDIN_LINK
-- Email: YOUR_EMAIL
+- Portfolio: [https://akashprabhu-portfolio.vercel.app/]
+- LinkedIn: [in/akash-daniel-prabhu]
+- Email: akashprabhu0302@gmail.com
 
 ---
 

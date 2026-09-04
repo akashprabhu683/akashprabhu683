@@ -14,6 +14,9 @@ $ whoami
 
 $ currently
 > Building practical web applications and expanding into full-stack development & AI
+
+```
+
 👨‍💻 About Me
 I'm a Computer Science Engineering student passionate about building practical, user-focused web applications. I started with frontend development and have built a strong foundation in creating responsive and modern user interfaces.
 Currently, I'm expanding my knowledge toward full-stack development while exploring Artificial Intelligence and its practical applications.
@@ -103,4 +106,3 @@ Tech: TypeScript · Next.js · React · Tailwind CSS
 </a>
 
 </div>
-```

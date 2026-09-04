@@ -1,5 +1,3 @@
-## Hi there 👋
-
 # Hi, I'm Akash Prabhu 👋
 
 ### Computer Science Engineering Student | Frontend Developer
